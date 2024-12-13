@@ -23,7 +23,8 @@
       precision: Float = 1,
       perceptualPrecision: Float = 1,
       size: CGSize? = nil,
-      traits: UITraitCollection = .init()
+      traits: UITraitCollection = .init(),
+      delay: TimeInterval = 0
     )
       -> Snapshotting
     {
@@ -37,7 +38,8 @@
           drawHierarchyInKeyWindow: false,
           traits: traits,
           view: viewController.view,
-          viewController: viewController
+          viewController: viewController,
+          delay: 0
         )
       }
     }
@@ -60,7 +62,8 @@
       precision: Float = 1,
       perceptualPrecision: Float = 1,
       size: CGSize? = nil,
-      traits: UITraitCollection = .init()
+      traits: UITraitCollection = .init(),
+      delay: TimeInterval = 0
     )
       -> Snapshotting
     {
@@ -73,7 +76,8 @@
           drawHierarchyInKeyWindow: drawHierarchyInKeyWindow,
           traits: traits,
           view: viewController.view,
-          viewController: viewController
+          viewController: viewController,
+          delay: delay
         )
       }
     }
